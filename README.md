@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎬 Inflearn Supabase Movie App
 
-## Getting Started
+Next.js 14과 Supabase를 활용한 영화 검색 & 리스트 웹 애플리케이션  
+무한 스크롤, 검색, 상태관리, SEO까지 포함된 프로젝트입니다.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 사용 기술
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+| 분류                | 기술                                                                                     |
+| ------------------- | ---------------------------------------------------------------------------------------- |
+| **프레임워크**      | [Next.js 14](https://nextjs.org/) (App Router, Server Actions)                           |
+| **스타일링**        | [Material Tailwind CSS](https://www.material-tailwind.com/)                              |
+| **백엔드**          | [Supabase](https://supabase.com/) (Database & Storage)                                   |
+| **비동기 상태관리** | [React Query](https://tanstack.com/query/latest)                                         |
+| **전역 상태관리**   | [Recoil](https://recoiljs.org/)                                                          |
+| **기타**            | [react-intersection-observer](https://www.npmjs.com/package/react-intersection-observer) |
+| **언어**            | TypeScript                                                                               |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ 주요 기능
 
-## Learn More
+✅ 영화 리스트 조회 및 포스터 클릭 시 상세 페이지 이동  
+✅ **검색 기능** (Recoil로 상태 관리)  
+✅ **무한 스크롤 구현** (react-query + intersection observer)  
+✅ Supabase 연동 (데이터 + 이미지 저장)  
+✅ 반응형 UI 구성 (Grid 활용)  
+✅ SEO 메타태그 자동 생성 (Next.js `generateMetadata` 사용)
+✅ 북마크를 통해 원하는 영화 저장
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📸 시연 예제
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🎥 검색 & 무한 스크롤
 
-## Deploy on Vercel
+![검색 & 무한 스크롤](./assets/netflixCopy_search.gif)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🎥 포스터 클릭 → 상세 페이지 이동 & 반응형
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![포스터 클릭 → 상세 페이지 이동 & 반응](./assets/netflixCopy_detail.gif)
+
+### 🎥 북마크 기능을 통한 북마크 페이지 활용
+
+![북마크 기능을 통한 북마크 페이지 활용](./assets/netflixCopy_bookmark.gif)

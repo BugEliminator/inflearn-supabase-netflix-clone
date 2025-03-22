@@ -1,6 +1,6 @@
 "use client";
 
-import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
+import { useInfiniteQuery } from "@tanstack/react-query";
 import MovieCard from "./movie-card";
 import { searchMovies } from "actions/movieActions";
 import { Spinner } from "@material-tailwind/react";

@@ -16,6 +16,7 @@ export async function searchMovies({ search, page, pageSize }) {
     .from("movie")
     .select("*")
     .like("title", `%${search}%`)
+    .order("id", { ascending: true })
     .range((page - 1) * pageSize, page * pageSize - 1);
 
   const hasNextPage = count > page * pageSize;
@@ -38,6 +39,31 @@ export async function getMovie(id: number) {
     .select("*")
     .eq("id", id)
     .maybeSingle();
+
+  handleError(error);
+
+  return data;
+}
+
+export async function toggleBookmark(id: number, current: boolean) {
+  const supabase = await createServerSupabaseClient();
+
+  const { error } = await supabase
+    .from("movie")
+    .update({ bookmark: !current })
+    .eq("id", id);
+
+  handleError(error);
+}
+
+export async function getBookmarkedMovies() {
+  const supabase = await createServerSupabaseClient();
+
+  const { data, error } = await supabase
+    .from("movie")
+    .select("*")
+    .eq("bookmark", true)
+    .order("id", { ascending: true });
 
   handleError(error);
 

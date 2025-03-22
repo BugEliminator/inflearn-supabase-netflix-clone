@@ -12,7 +12,7 @@ export default function Logo() {
           alt="넷플릭스 로고"
           width={50}
           height={50}
-          className="!w-20 h-auto"
+          className="!w-20 min-w-20 h-auto"
         />
       </Link>
     </div>

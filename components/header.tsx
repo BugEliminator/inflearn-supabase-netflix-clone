@@ -3,6 +3,7 @@
 import { useRecoilState } from "recoil";
 import Logo from "./logo";
 import { searchState } from "utils/recoil/atoms";
+import Link from "next/link";
 
 export default function Header() {
   const [search, setSearch] = useRecoilState(searchState);
@@ -12,8 +13,11 @@ export default function Header() {
       <nav className="flex gap-4">
         <Logo />
         <ul className="flex gap-2 text-white">
-          <li>Movies</li>
-          <li>Dramas</li>
+          {/* <li>Movies</li>
+          <li>Dramas</li> */}
+          <Link href="/bookmark">
+            <li>bookmark</li>
+          </Link>
         </ul>
       </nav>
       <div className="flex w-full max-w-72 gap-2 items-center border border-white bg-transparent text-white rounded-md p-2">
